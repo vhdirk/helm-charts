@@ -7,6 +7,11 @@ type: application
 version: 0.1.2
 appVersion: 2.1.2
 
+maintainers:
+  - email: vhdirk@gmail.com
+    name: vhdirk
+    url: https://vhdirk.github.io
+
 dependencies:
   - name: common
     repository: https://library-charts.k8s-at-home.com

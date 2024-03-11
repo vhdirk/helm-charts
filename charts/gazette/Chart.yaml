@@ -5,3 +5,8 @@ type: application
 
 version: 0.1.2
 appVersion: "0.0.1"
+
+maintainers:
+  - email: vhdirk@gmail.com
+    name: vhdirk
+    url: https://vhdirk.github.io

@@ -1,17 +1,25 @@
+apiVersion: v2
 annotations:
   artifacthub.io/changes: |
     - kind: changed
       description: Update README
-apiVersion: v2
-appVersion: 0.2.4
-dependencies:
-  - name: common
-    repository: https://library-charts.k8s-at-home.com
-    version: 4.5.2
 description: Unmanic is a simple tool for optimising your file library.
 home: https://github.com/Unmanic/unmanic
 icon: https://avatars.githubusercontent.com/u/81266068?s=200&v=4
 name: unmanic
+
+version: 0.1.2
+appVersion: 0.2.4
+
+maintainers:
+  - email: vhdirk@gmail.com
+    name: vhdirk
+    url: https://vhdirk.github.io
+
 sources:
   - https://github.com/Unmanic/unmanic
-version: 0.1.2
+
+dependencies:
+  - name: common
+    repository: https://library-charts.k8s-at-home.com
+    version: 4.5.2

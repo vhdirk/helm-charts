@@ -1,18 +1,26 @@
+apiVersion: v2
 annotations:
   artifacthub.io/changes: |
     - kind: changed
       description: Update README
-apiVersion: v2
-appVersion: 23.06.1
-dependencies:
-  - name: common
-    repository: https://library-charts.k8s-at-home.com
-    version: 4.5.2
 description: JDownloader 2 is a free, open-source download management tool with a huge community of developers that makes downloading as easy and fast as it should be. Users can start, stop or pause downloads, set bandwith limitations, auto-extract archives and much more. It's an easy-to-extend framework that can save hours of your valuable time every day!.
 home: http://jdownloader.org/
 icon: https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/jdownloader-2-icon.png&w=110
 name: jdownloader2
+
+version: 0.1.2
+appVersion: 23.06.1
+
+maintainers:
+  - email: vhdirk@gmail.com
+    name: vhdirk
+    url: https://vhdirk.github.io
+
 sources:
   - https://hub.docker.com/r/jlesage/jdownloader-2
   - https://jdownloader.org
-version: 0.1.2
+
+dependencies:
+  - name: common
+    repository: https://library-charts.k8s-at-home.com
+    version: 4.5.2
