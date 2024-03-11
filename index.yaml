@@ -1,0 +1,185 @@
+apiVersion: v1
+entries:
+  gazette:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2024-03-11T12:46:39.684602819Z"
+    description: Fetch newspapers in PDF
+    digest: d83465e6e3a4dfae3b9a5da7609219be6e1386ba6da2d5f6bbbb0e3791d35adc
+    name: gazette
+    type: application
+    urls:
+    - https://github.com/vhdirk/charts/releases/download/gazette-0.1.1/gazette-0.1.1.tgz
+    version: 0.1.1
+  genie:
+  - apiVersion: v2
+    appVersion: 3.0.1
+    created: "2024-03-11T12:46:39.817790269Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: The home server version of Almond
+    digest: e2875570484e34ff2f9f2bae2fa4968f4cf71d32daaf958020452a1150e34630
+    name: genie
+    type: application
+    urls:
+    - https://github.com/vhdirk/charts/releases/download/genie-0.1.1/genie-0.1.1.tgz
+    version: 0.1.1
+  homarr:
+  - apiVersion: v2
+    appVersion: 2.1.2
+    created: "2024-03-11T12:46:39.928001285Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: Homarr dashboard
+    digest: 06b7c03e6494c1df03ecee0e0fc216e53f4f5211bd14356637764c0d1fbe3d6a
+    name: homarr
+    type: application
+    urls:
+    - https://github.com/vhdirk/charts/releases/download/homarr-0.1.1/homarr-0.1.1.tgz
+    version: 0.1.1
+  jdownloader2:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Update README
+    apiVersion: v2
+    appVersion: 23.06.1
+    created: "2024-03-11T12:46:40.065285737Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: JDownloader 2 is a free, open-source download management tool with
+      a huge community of developers that makes downloading as easy and fast as it
+      should be. Users can start, stop or pause downloads, set bandwith limitations,
+      auto-extract archives and much more. It's an easy-to-extend framework that can
+      save hours of your valuable time every day!.
+    digest: ee42189f3ce21217b76c08eec4240421dbbd599ac8fc35389352c666b2ef8524
+    home: http://jdownloader.org/
+    icon: https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/jdownloader-2-icon.png&w=110
+    name: jdownloader2
+    sources:
+    - https://hub.docker.com/r/jlesage/jdownloader-2
+    - https://jdownloader.org
+    urls:
+    - https://github.com/vhdirk/charts/releases/download/jdownloader2-0.1.1/jdownloader2-0.1.1.tgz
+    version: 0.1.1
+  metallb-config:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2024-03-11T12:46:40.188017056Z"
+    description: Config for MetalLB
+    digest: c2e9ea90e2c07ba5f8eaaf3bcfcf6fdea8ed96d2b060718a0ba590848e5dac73
+    name: metallb-config
+    type: application
+    urls:
+    - https://github.com/vhdirk/charts/releases/download/metallb-config-0.1.1/metallb-config-0.1.1.tgz
+    version: 0.1.1
+  rtsp-to-hls:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2024-03-11T12:46:40.318956987Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: Convert RTSP to HLS stream
+    digest: aba9513ca2b81db4ecf71c29e5c9d75aa370e454dba9673056b28394a2ae3d5b
+    name: rtsp-to-hls
+    type: application
+    urls:
+    - https://github.com/vhdirk/charts/releases/download/rtsp-to-hls-0.1.1/rtsp-to-hls-0.1.1.tgz
+    version: 0.1.1
+  scrutiny:
+  - apiVersion: v2
+    appVersion: 2.1.2
+    created: "2024-03-11T12:46:40.464440906Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: Scrutiny WebUI for smartd S.M.A.R.T monitoring. Scrutiny is a Hard
+      Drive Health Dashboard & Monitoring solution.
+    digest: b307665c64ec699e3d449f2fb2029a123a726a75e0fef1a68dbdd03439dc761d
+    name: scrutiny
+    type: application
+    urls:
+    - https://github.com/vhdirk/charts/releases/download/scrutiny-0.1.1/scrutiny-0.1.1.tgz
+    version: 0.1.1
+  tdarr:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Update README
+    apiVersion: v2
+    appVersion: 2.00.18.2
+    created: "2024-03-11T12:46:40.588058652Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: Tdarr is a self hosted web-app for automating media library transcode/remux
+      management and making sure your files are exactly how you need them to be in
+      terms of codecs/streams/containers etc.
+    digest: b0f4378412f5a5afb890974c84007ae66f782951c87319e47fc6837deb94edfb
+    home: https://github.com/k8s-home-lab/helm-charts/tree/master/charts/stable/tdarr
+    icon: https://s7.gifyu.com/images/GifCroppedTran.gif
+    keywords:
+    - transcoding
+    - remux
+    - media
+    - video
+    maintainers:
+    - email: admin@aste.tools
+      name: k8s-home-lab
+    name: tdarr
+    sources:
+    - https://www.github.com/HaveAGitGat/Tdarr
+    - https://tdarr.io/docs/
+    urls:
+    - https://github.com/vhdirk/charts/releases/download/tdarr-5.0.3/tdarr-5.0.3.tgz
+    version: 5.0.3
+  ubooquity:
+  - apiVersion: v2
+    appVersion: 2.1.2
+    created: "2024-03-11T12:46:40.70859708Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: Ubooquity is a free, lightweight and easy-to-use home server for
+      your comics and ebooks. Use it to access your files from anywhere, with a tablet,
+      an e-reader, a phone or a computer.
+    digest: a0f4fbfccda2b1144eb47e291f2bfd431250ce549e9ce18ff5f094d627c7583a
+    name: ubooquity
+    type: application
+    urls:
+    - https://github.com/vhdirk/charts/releases/download/ubooquity-0.1.1/ubooquity-0.1.1.tgz
+    version: 0.1.1
+  unmanic:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Update README
+    apiVersion: v2
+    appVersion: 0.2.4
+    created: "2024-03-11T12:46:40.898946514Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: Unmanic is a simple tool for optimising your file library.
+    digest: f0494d79a213867f9b93c272e663c0fe0dd764c28a145e76ac06f71dcab54df9
+    home: https://github.com/Unmanic/unmanic
+    icon: https://avatars.githubusercontent.com/u/81266068?s=200&v=4
+    name: unmanic
+    sources:
+    - https://github.com/Unmanic/unmanic
+    urls:
+    - https://github.com/vhdirk/charts/releases/download/unmanic-0.1.1/unmanic-0.1.1.tgz
+    version: 0.1.1
+generated: "2024-03-11T12:46:40.898957545Z"
