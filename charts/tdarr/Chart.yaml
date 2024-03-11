@@ -25,4 +25,4 @@ name: tdarr
 sources:
 - https://www.github.com/HaveAGitGat/Tdarr
 - https://tdarr.io/docs/
-version: 5.0.2
+version: 5.0.3
