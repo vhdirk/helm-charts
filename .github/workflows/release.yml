@@ -24,7 +24,13 @@ jobs:
         with:
           version: v3.8.1
 
+      - name: Add dependency chart repos
+        run: |
+          helm repo add k8s-at-home-library https://library-charts.k8s-at-home.com
+
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.6.0
+        with:
+          charts_dir: charts
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
