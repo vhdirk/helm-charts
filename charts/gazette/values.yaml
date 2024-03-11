@@ -1,0 +1,13 @@
+
+image:
+  repository: ghcr.io/vhdirk/gazette
+  tag: latest
+  pullPolicy: IfNotPresent
+  pullSecrets: []
+
+schedule: "0 6 * * 1-6"
+
+restartPolicy: "Never"
+backoffLimit: 3
+
+config: ""

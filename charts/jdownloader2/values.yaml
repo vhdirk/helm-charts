@@ -1,0 +1,42 @@
+image:
+  repository: jlesage/jdownloader-2
+  tag: v23.06.1
+  pullPolicy: IfNotPresent
+
+env:
+  # -- Set the container timezone
+  TZ: "UTC"
+  # -- User ID of the user you want the container to run as in order to fix folder permission issues
+  PUID: "1000"
+  # -- Group ID, see PUID
+  PGID: "1000"
+  # -- Default umask for downloaded files
+  UMASK_SET: "022"
+
+securityContext:
+  privileged: false
+
+service:
+  main:
+    ports:
+      http:
+        port: 5800
+
+
+ingress:
+  # -- Enable and configure ingress settings for the chart under this key.
+  # @default -- See values.yaml
+  main:
+    enabled: false
+
+
+# -- Configure persistence settings for the chart under this key.
+# @default -- See values.yaml
+persistence:
+  config:
+    enabled: false
+    mountPath: /config
+
+  output:
+    enabled: false
+    mountPath: /output

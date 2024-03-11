@@ -1,0 +1,21 @@
+---
+{{- include "common.values.setup" . }}
+
+
+{{/* Append the hardcoded settings */}}
+{{- define "3dprinter-cam.harcodedValues" -}}
+persistence:
+  config:
+    enabled: "true"
+    mountPath: "/app/config.json"
+    subPath: "config.json"
+    type: "custom"
+    volumeSpec:
+      configMap:
+        name: {{ printf "%v-config" (include "common.names.fullname" .) }}
+
+{{- end -}}
+{{- $_ := mergeOverwrite .Values (include "3dprinter-cam.harcodedValues" . | fromYaml) -}}
+
+{{/* Render the templates */}}
+{{ include "common.all" . }}

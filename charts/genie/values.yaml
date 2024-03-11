@@ -1,0 +1,13 @@
+image:
+  repository: stanfordoval/almond-server
+  pullPolicy: Always
+  tag: latest
+
+securityContext:
+  privileged: false
+
+service:
+  main:
+    ports:
+      http:
+        port: 3000

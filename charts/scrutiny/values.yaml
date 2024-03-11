@@ -1,0 +1,60 @@
+image:
+  repository: ghcr.io/analogj/scrutiny
+  pullPolicy: Always
+  tag: master-omnibus
+
+env:
+  # -- Set the container timezone
+  TZ: "UTC"
+  # -- User ID of the user you want the container to run as in order to fix folder permission issues
+  PUID: "1000"
+  # -- Group ID, see PUID
+  PGID: "1000"
+
+  SCRUTINY_API_ENDPOINT: http://localhost:8080
+
+securityContext:
+  privileged: true
+
+service:
+  main:
+    ports:
+      http:
+        port: 8080
+
+ingress:
+  # -- Enable and configure ingress settings for the chart under this key.
+  # @default -- See values.yaml
+  main:
+    enabled: false
+# -- Configure persistence settings for the chart under this key.
+# @default -- See values.yaml
+
+persistence:
+  varrun:
+    enabled: true
+    accessMode: ReadWriteOnce
+    size: 1Gi
+  config:
+    enabled: true
+    mountpath: /opt/scrutiny
+  influxdb:
+    enabled: true
+    mountPath: "/opt/scrutiny/influxdb"
+    accessMode: ReadWriteOnce
+    size: 3Gi
+  udev:
+    enabled: true
+    type: hostPath
+    hostPath: "/run/udev"
+    mountPath: "/run/udev"
+    readOnly: true
+
+portal:
+  open:
+    enabled: true
+
+
+
+
+

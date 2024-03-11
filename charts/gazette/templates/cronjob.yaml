@@ -1,0 +1,62 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ include "gazette-config.name" . }}
+  labels:
+    app: {{ include "gazette-config.name" . }}
+    chart: {{ include "gazette-config.chart" . }}
+spec:
+  schedule: "{{ .Values.schedule }}"
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: gazette
+              image: "{{ .Values.image.repository }}:{{ .Values.image.tag}}"
+              imagePullPolicy: "{{ .Values.image.pullPolicy }}"
+              env:
+                - name: GAZETTE_CONFIG
+                  value: "/config/config.json"
+
+              volumeMounts:
+                - name: gazette-config
+                  mountPath: /config
+
+          {{- with .Values.image.pullSecrets }}
+          imagePullSecrets: {{- toYaml . | nindent 12 }}
+          {{- end }}
+
+          {{- with .Values.nodeSelector }}
+          nodeSelector: {{- toYaml . | nindent 12 }}
+          {{- end }}
+
+          {{- with .Values.affinity }}
+          affinity: {{- toYaml . | nindent 12 }}
+          {{- end }}
+
+          {{- with .Values.tolerations }}
+          tolerations: {{- toYaml . | nindent 12 }}
+          {{- end }}
+
+          {{- with .Values.podSecurityContext }}
+          securityContext: {{- toYaml . | nindent 12 }}
+          {{- end }}
+
+          {{- with .Values.restartPolicy }}
+          restartPolicy: {{- toYaml . | nindent 12 }}
+          {{- end }}
+
+          {{- with .Values.backoffLimit }}
+          backoffLimit: {{- toYaml . | nindent 12 }}
+          {{- end }}
+
+          volumes:
+            - name: gazette-config
+              configMap:
+                name: {{ include "gazette-config.name" . }}-config
+                items:
+                - key: config.json
+                  path: config.json

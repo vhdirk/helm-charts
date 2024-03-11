@@ -1,0 +1,22 @@
+# Developer dependencies
+.bin
+
+# IDE resources
+.vscode
+.idea
+.devcontainer/
+
+# Helm resources
+charts/*/charts/
+charts/*/Chart.lock
+
+# Other rsources
+.env
+.envrc
+Gemfile.lock
+
+# Trash
+.DS_Store
+
+# Testing
+__snapshot__/
