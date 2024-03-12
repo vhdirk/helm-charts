@@ -6,5 +6,5 @@ Helm charts for use at home
 
 ```console
 helm repo add vhdirk https://vhdirk.github.io/helm-charts
-helm search vhdirk
+helm search repo vhdirk
 ```
