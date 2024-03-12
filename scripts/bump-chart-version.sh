@@ -7,7 +7,7 @@ is_major="$2"
 is_minor="$3"
 is_patch="$4"
 
-version=$(grep "^version:" "charts/${parent_dir}/Chart.y*ml" | awk '{print $2}')
+version=$(grep "^version:" "charts/${parent_dir}/Chart.ya?ml" | awk '{print $2}')
 if [[ ! $version ]]; then
     echo "No valid version was found"
     exit 1
@@ -36,4 +36,4 @@ if [[ "$is_patch" = 'true' ]]; then
 fi
 
 echo "Bumping version for $parent_dir from $version to $major.$minor.$patch"
-sed -i "s/^version:.*/version: ${major}.${minor}.${patch}/g" "charts/${parent_dir}/Chart.y*ml"
+sed -i "s/^version:.*/version: ${major}.${minor}.${patch}/g" "charts/${parent_dir}/Chart.ya?ml"
