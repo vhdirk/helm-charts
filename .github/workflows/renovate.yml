@@ -14,3 +14,5 @@ jobs:
         uses: renovatebot/github-action@v40.1.4
         env:
           RENOVATE_TOKEN: "${{ secrets.RENOVATE_TOKEN }}"
+          RENOVATE_ALLOW_POST_UPGRADE_COMMAND_TEMPLATING: true
+          RENOVATE_ALLOWED_POST_UPGRADE_COMMANDS: "[^bash ]"

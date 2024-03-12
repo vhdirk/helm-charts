@@ -47,3 +47,11 @@ jobs:
 
       - name: Run chart-testing (install)
         run: ct install --config ct.yml
+
+  renovate-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.5.3
+      - name: Validate
+        uses: rinchsan/renovate-config-validator@v0.0.12
