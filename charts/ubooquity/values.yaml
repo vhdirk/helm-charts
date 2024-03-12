@@ -30,7 +30,6 @@ service:
         enabled: true
         port: 2203
 
-
 ingress:
   # -- Enable and configure ingress settings for the chart under this key.
   # @default -- See values.yaml
@@ -45,4 +44,3 @@ persistence:
   config:
     enabled: false
     mountPath: /config
-

@@ -1,28 +1,34 @@
+apiVersion: v2
 annotations:
   artifacthub.io/changes: |
     - kind: changed
       description: Update README
-apiVersion: v2
-appVersion: 2.00.18.2
-dependencies:
-- name: common
-  repository: https://library-charts.k8s-at-home.com
-  version: 4.5.2
-description: Tdarr is a self hosted web-app for automating media library transcode/remux
+name: tdarr
+description:
+  Tdarr is a self hosted web-app for automating media library transcode/remux
   management and making sure your files are exactly how you need them to be in terms
   of codecs/streams/containers etc.
 home: https://github.com/k8s-home-lab/helm-charts/tree/master/charts/stable/tdarr
 icon: https://s7.gifyu.com/images/GifCroppedTran.gif
 keywords:
-- transcoding
-- remux
-- media
-- video
+  - transcoding
+  - remux
+  - media
+  - video
+
+version: 5.0.4
+appVersion: 2.00.18.2
+
 maintainers:
-- email: admin@aste.tools
-  name: k8s-home-lab
-name: tdarr
+  - email: vhdirk@gmail.com
+    name: vhdirk
+    url: https://vhdirk.github.io
+
 sources:
-- https://www.github.com/HaveAGitGat/Tdarr
-- https://tdarr.io/docs/
-version: 5.0.3
+  - https://www.github.com/HaveAGitGat/Tdarr
+  - https://tdarr.io/docs/
+
+dependencies:
+  - name: common
+    repository: https://library-charts.k8s-at-home.com
+    version: 4.5.2
