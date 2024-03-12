@@ -33,7 +33,7 @@ jobs:
 
       - name: Chart linting
         run: |
-          ct lint --config .ct.yaml
+          ct lint --config .ct.yml
 
       # - name: Create kind cluster
       #   uses: helm/kind-action@v1.9.0
