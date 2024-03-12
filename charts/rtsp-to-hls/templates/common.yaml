@@ -1,9 +1,8 @@
 ---
 {{- include "common.values.setup" . }}
 
-
 {{/* Append the hardcoded settings */}}
-{{- define "3dprinter-cam.harcodedValues" -}}
+{{- define "rtsp-to-hls.harcodedValues" -}}
 persistence:
   config:
     enabled: "true"
@@ -15,7 +14,7 @@ persistence:
         name: {{ printf "%v-config" (include "common.names.fullname" .) }}
 
 {{- end -}}
-{{- $_ := mergeOverwrite .Values (include "3dprinter-cam.harcodedValues" . | fromYaml) -}}
+{{- $_ := mergeOverwrite .Values (include "rtsp-to-hls.harcodedValues" . | fromYaml) -}}
 
 {{/* Render the templates */}}
 {{ include "common.all" . }}
