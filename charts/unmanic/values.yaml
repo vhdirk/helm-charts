@@ -1,6 +1,6 @@
 image:
   repository: josh5/unmanic
-  tag: 0.2.4
+  tag: 0.2.6
   pullPolicy: IfNotPresent
 
 env:
