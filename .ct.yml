@@ -6,3 +6,8 @@ chart-repos:
   - k8s-at-home-library=https://library-charts.k8s-at-home.com
 helm-extra-args: --timeout 600s
 validate-maintainers: false
+validate-yaml: true
+process-all-charts: false
+print-config: true
+check-version-increment: true
+debug: true
