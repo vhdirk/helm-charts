@@ -1,4 +1,8 @@
-# @vhdirk's Helm Charts
+---
+layout: base
+---
+
+# Helm Charts
 
 Helm charts for use at home
 
