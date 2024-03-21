@@ -4,3 +4,5 @@ owners:
     email: vhdirk@gmail.com
 ignore: 
   - name: gazette
+  - name: rtsp-to-hls
+  - name: metallb-config
