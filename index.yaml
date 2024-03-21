@@ -258,6 +258,20 @@ entries:
   skooner:
   - apiVersion: v2
     appVersion: stable
+    created: "2024-03-21T20:57:57.585350506Z"
+    description: Skooner is the easiest way to manage your Kubernetes cluster
+    digest: 2e39187f238e7394fcff95db9c89aed054aa9bc9eb31752243dc9e0b6754ec9e
+    maintainers:
+    - email: vhdirk@gmail.com
+      name: vhdirk
+      url: https://vhdirk.github.io
+    name: skooner
+    type: application
+    urls:
+    - https://github.com/vhdirk/helm-charts/releases/download/skooner-0.1.2/skooner-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: stable
     created: "2024-03-21T20:55:14.071462212Z"
     description: Skooner is the easiest way to manage your Kubernetes cluster
     digest: f07f349129faef16e54e0c6875f72d46a99ea13afc1dcab7c01218bac51e5606
@@ -459,4 +473,4 @@ entries:
     urls:
     - https://github.com/vhdirk/charts/releases/download/unmanic-0.1.1/unmanic-0.1.1.tgz
     version: 0.1.1
-generated: "2024-03-21T20:55:14.071498209Z"
+generated: "2024-03-21T20:57:57.585397764Z"
