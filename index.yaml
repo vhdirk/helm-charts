@@ -73,6 +73,42 @@ entries:
     - https://github.com/vhdirk/charts/releases/download/genie-0.1.1/genie-0.1.1.tgz
     version: 0.1.1
   homarr:
+  - annotations:
+      artifacthub.io/license: MIT
+      artifacthub.io/links: |
+        - name: Documentation
+          url: https://homarr.dev/docs
+        - name: ajnart/homarr
+          url: https://github.com/ajnart/homarr
+        - name: Chart
+          url: https://github.com/vhdirk/helm-charts
+      artifacthub.io/prerelease: "false"
+    apiVersion: v2
+    appVersion: 2.1.2
+    created: "2024-03-21T22:28:26.909608104Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: Homarr dashboard
+    digest: 70785410b7e5ac45d9ae89b853fd1f2d96d9048045ff9bc8151ece1f3ba5191d
+    home: https://github.com/vhdirk/helm-charts
+    icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/homarr.png
+    keywords:
+    - homarr
+    - dashboard
+    maintainers:
+    - email: vhdirk@gmail.com
+      name: vhdirk
+      url: https://vhdirk.github.io
+    name: homarr
+    sources:
+    - https://github.com/vhdirk/helm-charts
+    - https://github.com/ajnart/homarr
+    type: application
+    urls:
+    - https://github.com/vhdirk/helm-charts/releases/download/homarr-0.1.4/homarr-0.1.4.tgz
+    version: 0.1.4
   - apiVersion: v2
     appVersion: 2.1.2
     created: "2024-03-21T22:24:19.26319553Z"
@@ -505,4 +541,4 @@ entries:
     urls:
     - https://github.com/vhdirk/charts/releases/download/unmanic-0.1.1/unmanic-0.1.1.tgz
     version: 0.1.1
-generated: "2024-03-21T22:24:19.263246766Z"
+generated: "2024-03-21T22:28:26.909689937Z"
