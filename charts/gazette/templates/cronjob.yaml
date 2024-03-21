@@ -1,10 +1,10 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: {{ include "gazette-config.name" . }}
+  name: {{ include "gazette.name" . }}
   labels:
-    app: {{ include "gazette-config.name" . }}
-    chart: {{ include "gazette-config.chart" . }}
+    app: {{ include "gazette.name" . }}
+    chart: {{ include "gazette.chart" . }}
 spec:
   schedule: "{{ .Values.schedule }}"
   successfulJobsHistoryLimit: 1
@@ -56,7 +56,7 @@ spec:
           volumes:
             - name: gazette-config
               configMap:
-                name: {{ include "gazette-config.name" . }}-config
+                name: {{ include "gazette.name" . }}-config
                 items:
                 - key: config.json
                   path: config.json

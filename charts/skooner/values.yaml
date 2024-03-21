@@ -1,0 +1,205 @@
+# -- Image pull secrets
+imagePullSecrets: []
+# -- Chart name override
+nameOverride: ""
+# -- Full chart name override
+fullnameOverride: ""
+
+
+skooner:
+  port: 4654
+
+
+## -- Container level security context
+securityContext:
+  capabilities:
+    drop:
+      - ALL
+  readOnlyRootFilesystem: true
+  runAsNonRoot: true
+  runAsUser: 65534
+  runAsGroup: 65534
+  allowPrivilegeEscalation: false
+  privileged: false
+  seccompProfile:
+    type: RuntimeDefault
+  seLinuxOptions:
+    level: "s0:c123,c456"
+
+## -- Pod level security context
+podSecurityContext:
+  fsGroupChangePolicy: "OnRootMismatch"
+  runAsNonRoot: true
+  runAsUser: 65534
+  fsGroup: 65534
+  runAsGroup: 65534
+  seccompProfile:
+    type: RuntimeDefault
+
+image:
+  repository: ghcr.io/skooner-k8s/skooner
+  pullPolicy: IfNotPresent
+  tag: stable
+
+
+## -- Deployment specific config
+deployment:
+  strategy:
+    type: RollingUpdate
+    rollingUpdate: {}
+
+  resources: {}
+  #  We usually recommend not to specify default resources and to leave this as a conscious
+  #  choice for the user. This also increases chances charts run on environments with little
+  #  resources, such as Minikube. If you do want to specify resources, uncomment the following
+  #  lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  #  limits:
+  #    cpu: 100m
+  #    memory: 128Mi
+  #  requests:
+  #    cpu: 100m
+  #  memory: 128Mi
+
+  lifecycle: {}
+  # -- Configure the livenessProbe parameters
+  livenessProbe:
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    failureThreshold: 5
+  # -- Configure the readinessProbe parameters
+  readinessProbe:
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    failureThreshold: 5
+  # -- Configure the startupProbe parameters
+  startupProbe:
+    failureThreshold: 60
+    successThreshold: 1
+    periodSeconds: 1
+    timeoutSeconds: 1
+
+  # -- Configure a custom livenessProbe. This overwrites the default object
+  customLivenessProbe: {}
+  # -- Configure a custom readinessProbe. This overwrites the default object
+  customReadinessProbe: {}
+  # -- Configure a custom startupProbe. This overwrites the default object
+  customStartupProbe: {}
+
+  # -- Specify the serviceAccountName value.
+  serviceAccount:
+    # -- Specifies whether a service account should be created
+    create: true
+    # -- Annotations to add to the service account
+    annotations: {}
+    # -- The name of the service account to use. If not set and create is true, a name is generated using the fullname template
+    name: ""
+
+  # https://github.com/kubernetes/kubernetes/issues/57601
+  automountServiceAccountToken: false
+
+  terminationGracePeriodSeconds: 60
+
+  # -- Node labels for pod assignment.
+  nodeSelector: {}
+  # If you do want to specify node labels, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'annotations:'.
+  #   foo: bar
+
+  extraEnv: []
+
+  # -- Array of extra arguments to be passed down to the Deployment. Kubernetes args format is expected
+  extraArgs: []
+
+  # -- Extra volumes you can attach to the pod.
+  extraVolumes: []
+  # - name: my-volume
+  #   secret:
+  #     secretName: my-secret
+
+  # -- Extra volume mounts, allows mounting the extraVolumes to the container.
+  extraVolumeMounts: []
+  # - name: my-volume
+  #   mountPath: /etc/secrets/my-secret
+  #   readOnly: true
+
+  # -- If you want to add extra sidecar containers.
+  extraContainers: ""
+  # extraContainers: |
+  #  - name: ...
+  #    image: ...
+
+  # -- If you want to add extra init containers.
+  extraInitContainers: ""
+  # extraInitContainers: |
+  #  - name: ...
+  #    image: ...
+
+  # -- Configure node tolerations.
+  tolerations: []
+
+  # -- Configure pod dnsConfig.
+  dnsConfig: {}
+  #   options:
+  #     - name: "ndots"
+  #       value: "1"
+
+  labels: {}
+  #      If you do want to specify additional labels, uncomment the following
+  #      lines, adjust them as necessary, and remove the curly braces after 'labels:'.
+  #      e.g.  type: app
+
+  annotations: {}
+  #      If you do want to specify annotations, uncomment the following
+  #      lines, adjust them as necessary, and remove the curly braces after 'annotations:'.
+  #      e.g.  sidecar.istio.io/rewriteAppHTTPProbers: "true"
+
+  # -- Specify pod metadata, this metadata is added directly to the pod, and not higher objects
+  podMetadata:
+    # -- Extra pod level labels
+    labels: {}
+    # -- Extra pod level annotations
+    annotations: {}
+
+# -- Configure node affinity
+affinity: {}
+
+## -- Configures the Kubernetes service
+service:
+  # -- En-/disable the service
+  enabled: true
+  # -- The service type
+  type: ClusterIP
+  # -- The load balancer IP
+  loadBalancerIP: ""
+  # -- The service port
+  port: 4654
+  # -- The service port name. Useful to set a custom service port name if it must follow a scheme (e.g. Istio)
+  name: http
+  # -- If you do want to specify annotations, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'annotations:'.
+  # kubernetes.io/ingress.class: nginx
+  # kubernetes.io/tls-acme: "true"
+  annotations: {}
+  # -- If you do want to specify additional labels, uncomment the following lines, adjust them as necessary, and remove the curly braces after 'labels:'.
+  # e.g.  app: skooner
+  labels: {}
+
+
+## -- Configure ingress
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  #     kubernetes.io/ingress.class: nginx
+  #     kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: skooner.localhost
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  #    tls: []
+  #        hosts:
+  #          - proxy.skooner.local
+  #      - secretName: skooner-proxy-example-tls
+
+
