@@ -16,9 +16,6 @@ metadata:
       {{- toYaml . | nindent 4 }}
     {{- end }}
 spec:
-  {{- if not .Values.deployment.autoscaling.enabled }}
-  replicas: {{ .Values.replicaCount }}
-  {{- end }}
   revisionHistoryLimit: {{ .Values.revisionHistoryLimit }}
   strategy:
     {{- toYaml .Values.deployment.strategy | nindent 4 }}
