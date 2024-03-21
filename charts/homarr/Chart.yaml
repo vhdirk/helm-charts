@@ -3,7 +3,7 @@ name: homarr
 description: Homarr dashboard
 type: application
 
-version: 0.1.3
+version: 0.1.4
 appVersion: 2.1.2
 
 maintainers:
@@ -15,3 +15,24 @@ dependencies:
   - name: common
     repository: https://library-charts.k8s-at-home.com
     version: 4.5.2
+
+home: https://github.com/vhdirk/helm-charts
+icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/homarr.png
+keywords:
+  - homarr
+  - dashboard
+sources:
+  - https://github.com/vhdirk/helm-charts
+  - https://github.com/ajnart/homarr
+annotations:
+  artifacthub.io/prerelease: "false"
+  artifacthub.io/license: MIT
+  artifacthub.io/links: |
+    - name: Documentation
+      url: https://homarr.dev/docs
+    - name: ajnart/homarr
+      url: https://github.com/ajnart/homarr
+    - name: Chart
+      url: https://github.com/vhdirk/helm-charts
+
+
