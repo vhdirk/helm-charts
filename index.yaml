@@ -3,6 +3,20 @@ entries:
   gazette:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2024-03-22T07:01:44.904799996Z"
+    description: Fetch newspapers in PDF
+    digest: 6a1cd51d665a0ecc42acae9dcca15cd40260a95451598f57c67c66733164749a
+    maintainers:
+    - email: vhdirk@gmail.com
+      name: vhdirk
+      url: https://vhdirk.github.io
+    name: gazette
+    type: application
+    urls:
+    - https://github.com/vhdirk/helm-charts/releases/download/gazette-0.1.4/gazette-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2024-03-21T19:53:53.56063795Z"
     description: Fetch newspapers in PDF
     digest: 5cee21ba7b267aa4f5870e8e0231fc9f470b0a6ff64829d14c7dc2de4cbc968c
@@ -541,4 +555,4 @@ entries:
     urls:
     - https://github.com/vhdirk/charts/releases/download/unmanic-0.1.1/unmanic-0.1.1.tgz
     version: 0.1.1
-generated: "2024-03-21T22:28:26.909689937Z"
+generated: "2024-03-22T07:01:44.904862012Z"
