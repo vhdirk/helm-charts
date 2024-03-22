@@ -2,6 +2,9 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: {{ include "gazette.name" . }}
+  {{- if .Release.Namespace }}
+  namespace: {{ .Release.Namespace }}
+  {{- end }}
   labels:
     app: {{ include "gazette.name" . }}
     chart: {{ include "gazette.chart" . }}
