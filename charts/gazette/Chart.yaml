@@ -3,7 +3,7 @@ name: gazette
 description: Fetch newspapers in PDF
 type: application
 
-version: 0.1.4
+version: 0.1.5
 appVersion: "0.0.1"
 
 maintainers:

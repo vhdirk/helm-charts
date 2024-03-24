@@ -1,0 +1,6 @@
+[env]
+_.python.venv = { path = ".venv" }
+
+[tools]
+helm = "latest"
+helm-docs = "latest"

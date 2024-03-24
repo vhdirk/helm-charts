@@ -1,9 +1,9 @@
 apiVersion: v2
 name: homarr
-description: Homarr dashboard
+description: A simple, yet powerful dashboard for your server.
 type: application
 
-version: 0.1.4
+version: 0.1.5
 appVersion: 2.1.2
 
 maintainers:

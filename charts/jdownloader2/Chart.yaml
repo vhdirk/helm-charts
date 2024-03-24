@@ -8,7 +8,7 @@ home: http://jdownloader.org/
 icon: https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/jdownloader-2-icon.png&w=110
 name: jdownloader2
 
-version: 0.1.2
+version: 0.1.3
 appVersion: 23.06.1
 
 maintainers:
