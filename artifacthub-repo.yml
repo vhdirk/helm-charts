@@ -1,8 +1,17 @@
 repositoryID: 71959a59-365b-4c1b-a3f3-cac0026dcd22
-owners: 
+owners:
   - name: vhdirk
     email: vhdirk@gmail.com
-ignore: 
+ignore:
   - name: gazette
   - name: rtsp-to-hls
   - name: metallb-config
+  - name: genie
+  - name: homarr
+    version: 0.1.1
+  - name: scrutiny
+    version: 0.1.1
+  - name: ubooquity
+    version: 0.1.1
+  - name: unmanic
+    version: 0.1.1
