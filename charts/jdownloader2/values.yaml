@@ -1,6 +1,6 @@
 image:
   repository: jlesage/jdownloader-2
-  tag: v24.01.1
+  tag: v24.07.1
   pullPolicy: IfNotPresent
 
 env:
